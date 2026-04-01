@@ -1,0 +1,368 @@
+/* Configurações Gerais e Variáveis */
+:root {
+    --black: #000;
+    --white: #FFFFFF;
+    --amora: #591829;
+    --vermelhocereja: #be0933;
+    --rosa: #880f33;
+    --creme: #F1FAEE;
+    --marrom: #a6774E;
+}
+
+
+body {
+    font-family: serif;
+    background: var(--creme);
+    margin: 0;
+}
+
+
+
+/*Barra de navegação*/
+#navbar{
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: var(--vermelhocereja);
+    display: flex;
+    align-items: center;
+    padding: 4px 12px;
+    gap: 8px;
+}
+
+#navbar .logo-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+#navbar .nav-logo {
+    height: 50px;
+    width: auto;
+    max-width: 140px;
+    border-radius: 50px;
+}
+
+/*Links com aparencia difente*/
+#navbar a{
+    color: var(--white);
+    display: block;
+    float: left;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*Link do navbar em destaque*/
+#navbar a.active{
+    background-color: var(--amora);
+}
+
+/*Mouse sobre o menu*/
+#navbar a:hover{
+    background-color: var(--amora);
+    color: var(--creme);
+}
+
+
+
+.main {
+    flex: 70%;
+    
+    padding: 20px;
+}
+
+.main h1 {
+    color: var(--amora);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Listas */
+ul {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+li {
+    list-style: c;
+}
+
+.list {
+    list-style-type: circle;
+    margin-bottom: 8px;
+    list-style-position: inside;
+}
+
+
+
+/* imagem da fatia de torta */
+.fatia-torta {
+    max-width: 100%;
+    width: 280px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    
+}
+
+/* cores de texto e fundo ingredientes e preparo */
+.ingredientes {
+    background-color: var(--rosa);
+    color: var(--white);
+    padding: 15px;
+    border-radius: 50px;
+}
+
+.preparo {
+    background-color: var(--marrom);
+    --fontColor: var(--black);
+    padding: 15px;
+    border-radius: 50px;
+}
+
+.brigadeiro-img {
+    max-width: 100%;
+    width: 280px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+   
+}
+
+.pudim-img {
+    max-width: 100%;
+    width: 280px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    
+}
+
+#menu-receitas {
+    padding: 40px 20px;
+    background-color: var(--creme);
+}
+
+#menu-receitas h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #4a2f1c;
+    font-size: 2.2rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 14px 16px 8px;
+    color: #333;
+}
+
+.card p {
+    margin: 0 16px 15px;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+/* Espaço interno nos textos dos artigos para não colar na borda */
+.container article,
+#menu-receitas .card,
+.ingredientes,
+.preparo {
+    padding: 18px;
+}
+
+.container article h1,
+#menu-receitas h2,
+.ingredientes h3,
+.preparo h3 {
+    margin-top: 0;
+}
+
+
+.btn-card {
+    display: inline-block;
+    margin: 0 16px 16px;
+    background-color: var(--amora);
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.btn-card:hover {
+    background-color: var(--creme);
+    color: var(--amora);
+}
+
+
+/* tabela */
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+td, th {
+    border: 1px solid var(--black);
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: var(--rosa);
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: var(--vermelhocereja); 
+  color: var(--white);
+  
+}
+footer a {
+    color: var(--marrom);
+    display: block;
+    
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/* Responsividade */
+
+/* Mobile first (padrão para smartphones) */
+.container {
+    padding: 10px;
+}
+
+@media screen and (min-width: 480px) {
+    #navbar {
+        padding: 8px 14px;
+        gap: 10px;
+    }
+
+    #navbar a {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+
+    .fatia-torta,
+    .brigadeiro-img,
+    .pudim-img {
+        width: 320px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #navbar {
+        padding: 10px 16px;
+        gap: 12px;
+    }
+
+    #navbar a {
+        padding: 10px 12px;
+        font-size: 1rem;
+    }
+
+    .container {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+    .cards {
+        grid-template-columns: repeat(3, minmax(220px, 1fr));
+    }
+
+    .fatia-torta,
+    .brigadeiro-img,
+    .pudim-img {
+        width: 380px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #navbar {
+        padding: 12px 18px;
+        gap: 14px;
+    }
+
+    #navbar a {
+        padding: 10px 14px;
+        font-size: 1rem;
+    }
+
+    .container {
+        max-width: 980px;
+    }
+    .main {
+        padding: 24px;
+    }
+
+    .fatia-torta,
+    .brigadeiro-img,
+    .pudim-img {
+        width: 420px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #navbar {
+        padding: 12px 20px;
+        gap: 16px;
+    }
+
+    #navbar a {
+        padding: 10px 16px;
+        font-size: 1rem;
+    }
+
+    .container {
+        max-width: 1180px;
+    }
+    .cards {
+        grid-template-columns: repeat(4, minmax(220px, 1fr));
+    }
+
+    .fatia-torta,
+    .brigadeiro-img,
+    .pudim-img {
+        width: 480px;
+    }
+}
