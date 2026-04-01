@@ -114,7 +114,7 @@ li {
 
 .preparo {
     background-color: var(--marrom);
-    --fontColor: var(--black);
+    color: var(--black);
     padding: 15px;
     border-radius: 50px;
 }
@@ -252,15 +252,19 @@ footer {
   color: var(--white);
   
 }
+
 footer a {
-    color: var(--marrom);
+    color: var(--white);
     display: block;
-    
     padding: 10px;
     text-align: center;
     text-decoration: none;
 }
 
+
+footer a:hover {
+    color: var(--marrom);
+}
 
 /* Responsividade */
 
